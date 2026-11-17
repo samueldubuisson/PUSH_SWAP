@@ -1,28 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parse_arguments.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sdubuiss <sdubuiss@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/16 18:13:58 by sdubuiss          #+#    #+#             */
+/*   Updated: 2026/11/17 12:02:13 by sdubuiss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void    free_parse(char ***parse)
-{
-    int i;
-    int j;
-
-    i = 0;
-    while (parse[i])
-    {
-        j = 0;
-        while (parse[i][j])
-        {
-            free(parse[i][j]);
-            j++;
-        }
-        free(parse[i]);
-        i++;
-    }
-    free(parse);
-}
 char	***ft_parse_arguments(int argc, char *argv[])
 {
 	char	***parse;
-	int	i;
+	int		i;
 
 	parse = ft_calloc(argc + 1, sizeof(char **));
 	if (!parse)
