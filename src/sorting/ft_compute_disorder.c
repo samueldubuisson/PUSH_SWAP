@@ -6,13 +6,13 @@
 /*   By: sdubuiss <sdubuiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 19:54:51 by sdubuiss          #+#    #+#             */
-/*   Updated: 2026/11/16 19:55:54 by sdubuiss         ###   ########.fr       */
+/*   Updated: 2026/11/20 17:39:33 by sdubuiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-float	compute_disorder(t_stack *stack_a)
+float	ft_compute_disorder(t_stack *stack_a)
 {
 	int		mistakes;
 	int		total_pairs;
@@ -35,6 +35,6 @@ float	compute_disorder(t_stack *stack_a)
 		tmp = tmp->next;
 	}
 	if (total_pairs == 0)
-		retrun (0.0);
+		return (0.0);
 	return ((float)mistakes / total_pairs);
 }

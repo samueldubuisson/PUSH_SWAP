@@ -23,14 +23,19 @@ SRCS = src/main.c\
 	src/operations/instructions/rrr.c\
 	src/parsing/ft_fill_stack.c\
 	src/parsing/ft_init_struct.c\
-	src/parsing/free_parse.c\
 	src/parsing/ft_parse_arguments.c\
 	src/parsing/ft_parse_numbers.c\
 	src/parsing/ft_check_duplicates.c\
 	src/parsing/ft_check_int_limits.c\
-	src/parsing/ft_strcmp.c\
+	src/utils/ft_utils.c\
 	src/parsing/ft_parse_options.c\
-	src/utils/ft_utils_list.c
+	src/utils/ft_utils_list.c\
+	src/parsing/ft_print_benchmark.c\
+	src/sorting/ft_compute_disorder.c\
+	src/sorting/ft_sort_stack.c\
+	src/sorting/ft_sort_simple.c\
+	src/sorting/ft_sort_medium.c\
+	src/sorting/ft_sort_complex.c\
 
 OBJS = $(SRCS:.c=.o)
 

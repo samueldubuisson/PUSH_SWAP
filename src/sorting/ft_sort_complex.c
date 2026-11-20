@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_sort_complex.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdubuiss <sdubuiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/17 12:11:40 by sdubuiss          #+#    #+#             */
-/*   Updated: 2026/11/17 12:13:28 by sdubuiss         ###   ########.fr       */
+/*   Created: 2026/11/20 15:37:45 by sdubuiss          #+#    #+#             */
+/*   Updated: 2026/11/20 17:38:20 by sdubuiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_strcmp(char *s1, char *s2)
+void	ft_sort_complex(t_data *data)
 {
-	while (*s1 && *s1 == *s2)
-	{
-		s1++;
-		s2++;
-	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	(void)data;
 }

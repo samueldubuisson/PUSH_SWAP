@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_parse.c                                       :+:      :+:    :+:   */
+/*   ft_sort_simple.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdubuiss <sdubuiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/17 11:59:36 by sdubuiss          #+#    #+#             */
-/*   Updated: 2026/11/17 12:01:33 by sdubuiss         ###   ########.fr       */
+/*   Created: 2026/11/19 22:08:12 by sdubuiss          #+#    #+#             */
+/*   Updated: 2026/11/20 17:37:28 by sdubuiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_parse(char ***parse)
+void	ft_sort_simple(t_data *data)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	while (parse[i])
-	{
-		j = 0;
-		while (parse[i][j])
-		{
-			free(parse[i][j]);
-			j++;
-		}
-		free(parse[i]);
-		i++;
-	}
-	free(parse);
+	(void)data;
 }
