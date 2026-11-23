@@ -36,6 +36,10 @@ SRCS = src/main.c\
 	src/sorting/ft_sort_simple.c\
 	src/sorting/ft_sort_medium.c\
 	src/sorting/ft_sort_complex.c\
+	src/utils/ft_utils_list_two.c\
+	src/sorting/ft_find_best_candidate.c\
+	src/sorting/ft_rotate_both.c\
+	src/sorting/ft_calculate_rotation.c\
 
 OBJS = $(SRCS:.c=.o)
 

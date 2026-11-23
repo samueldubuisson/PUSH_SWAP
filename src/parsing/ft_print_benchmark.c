@@ -6,7 +6,7 @@
 /*   By: sdubuiss <sdubuiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 13:37:41 by sdubuiss          #+#    #+#             */
-/*   Updated: 2026/11/20 19:04:22 by sdubuiss         ###   ########.fr       */
+/*   Updated: 2026/11/21 15:16:06 by sdubuiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,8 @@ void	ft_print_benchmark(t_data data)
 	print_stat(" ss: ", data.stats.count_ss);
 	print_stat(" pa: ", data.stats.count_pa);
 	print_stat(" pb: ", data.stats.count_pb);
-	print_stat(" ra: ", data.stats.count_ra);
+	ft_putendl_fd("", 2);
+	print_stat("[bench] ra: ", data.stats.count_ra);
 	print_stat(" rb: ", data.stats.count_rb);
 	print_stat(" rr: ", data.stats.count_rr);
 	print_stat(" rra: ", data.stats.count_rra);

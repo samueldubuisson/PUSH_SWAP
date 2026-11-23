@@ -6,7 +6,7 @@
 /*   By: sdubuiss <sdubuiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 13:36:21 by sdubuiss          #+#    #+#             */
-/*   Updated: 2026/11/20 22:25:25 by sdubuiss         ###   ########.fr       */
+/*   Updated: 2026/11/23 01:37:54 by sdubuiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,9 @@ int	main(int argc, char **argv)
 	if (ft_parse_input(argc, argv, &data))
 		return (1);
 	ft_sort_stack(&data);
-	ft_print_benchmark(data);
+	if (data.config.bench)
+		ft_print_benchmark(data);
 	ft_stackclear(&data.stack_a);
+	ft_stackclear(&data.stack_b);
 	return (0);
 }

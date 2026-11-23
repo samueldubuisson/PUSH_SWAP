@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
+/*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/11/15 17:50:17 by username         #+#    #+#              */
-/*   Updated: 2026/11/20 23:20:37 by sdubuiss         ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sdubuiss <sdubuiss@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/23 01:41:13 by sdubuiss          #+#    #+#             */
+/*   Updated: 2026/11/23 02:11:56 by sdubuiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "libft/libft.h"
+
+# define ROTATE_UP 1
+# define ROTATE_DOWN -1
 
 typedef struct s_stack
 {
@@ -57,6 +60,25 @@ typedef struct s_data
 	t_config	config;
 	t_stats		stats;
 }	t_data;
+
+typedef struct s_candidate
+{
+	int	best_cost;
+	int	best_pos;
+	int	current_cost;
+	int	i;
+	int	value;
+}	t_candidate;
+
+typedef struct s_rotation
+{
+	int	size_a;
+	int	size_b;
+	int	rotate_a;
+	int	rotate_b;
+	int	direction_a;
+	int	direction_b;
+}	t_rotation;
 
 /* Generic operations */
 int		swap(t_stack **stack);
@@ -101,12 +123,18 @@ void	ft_stackadd_back(t_stack **stack, t_stack *new);
 void	ft_stackclear(t_stack **stack);
 void	free_parse(char ***parse);
 int		ft_strcmp(char *s1, char *s2);
+int		ft_stack_size(t_stack *stack);
 
 /* Sorting */
-void	ft_sort_stack(t_data *data);
-float	ft_compute_disorder(t_stack *stack_a);
-void	ft_sort_simple(t_data *data);
-void	ft_sort_medium(t_data *data);
-void	ft_sort_complex(t_data *data);
+void			ft_sort_stack(t_data *data);
+float			ft_compute_disorder(t_stack *stack_a);
+void			ft_sort_simple(t_data *data);
+void			ft_sort_medium(t_data *data);
+void			ft_sort_complex(t_data *data);
+void			ft_rotate_to_position_a(t_data *data, int pos);
+int				ft_find_insert_position(t_stack *stack, int value);
+void			ft_rotate_both(t_data *data, int pos_a, int pos_b);
+t_rotation		ft_calculate_rotation(t_data *data, int pos_a, int pos_b);
+t_candidate		ft_find_best_candidate(t_data *data);
 
 #endif
