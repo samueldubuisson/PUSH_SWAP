@@ -3,18 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdubuiss <sdubuiss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/03 07:40:03 by sdubuiss          #+#    #+#             */
-/*   Updated: 2026/11/14 16:23:31 by sdubuiss         ###   ########.fr       */
+/*   Created: 2026/11/02 16:00:00 by student           #+#    #+#             */
+/*   Updated: 2026/11/25 19:22:46 by sdubuiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {
 	return (write(1, &c, 1));
+}
+
+int	ft_putstr(char *s)
+{
+	int	i;
+
+	if (!s)
+		return (0);
+	i = 0;
+	while (s[i])
+		i += ft_putchar(s[i]);
+	return (i);
 }
 
 int	ft_nbrlen(unsigned long n, int base)

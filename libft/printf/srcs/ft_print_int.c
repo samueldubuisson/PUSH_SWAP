@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_int.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdubuiss <sdubuiss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/03 12:09:39 by sdubuiss          #+#    #+#             */
-/*   Updated: 2026/11/14 16:22:34 by sdubuiss         ###   ########.fr       */
+/*   Created: 2026/11/02 16:00:00 by student           #+#    #+#             */
+/*   Updated: 2026/11/25 19:16:38 by sdubuiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 static int	ft_get_sign(long n, t_flags *f)
 {

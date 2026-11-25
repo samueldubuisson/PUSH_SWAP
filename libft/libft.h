@@ -6,18 +6,23 @@
 /*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/19 15:35:05 by username         #+#    #+#              */
-/*   Updated: 2026/11/14 16:49:05 by sdubuiss         ###   ########.fr       */
+/*   Updated: 2026/11/25 19:24:14 by sdubuiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE  5
+# endif
+
 # include <stdlib.h>
 # include <stddef.h>
 # include <stdint.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <fcntl.h>
 
 typedef struct s_list
 {
@@ -36,6 +41,13 @@ typedef struct s_flags
 	int	precision;
 	int	dot;
 }	t_flags;
+
+typedef struct s_gnl
+{
+	char			buf[BUFFER_SIZE];
+	ssize_t			len;
+	struct s_gnl	*next;
+}	t_gnl;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -96,5 +108,6 @@ int		ft_putstr(char *s);
 int		ft_nbrlen(unsigned long n, int base);
 int		ft_putnbr_base(unsigned long n, char *base);
 int		ft_pad(int count, char c);
+char	*get_next_line(int fd);
 
 #endif

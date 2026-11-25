@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_uint.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdubuiss <sdubuiss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/03 12:49:19 by sdubuiss          #+#    #+#             */
-/*   Updated: 2026/11/14 16:23:20 by sdubuiss         ###   ########.fr       */
+/*   Created: 2026/11/02 16:00:00 by student           #+#    #+#             */
+/*   Updated: 2026/11/02 16:00:00 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_print_uint(unsigned int n, t_flags *f)
 {
@@ -23,7 +23,7 @@ int	ft_print_uint(unsigned int n, t_flags *f)
 		len = 0;
 	if (f->dot && f->precision > len)
 		len = f->precision;
-	if (!f->minus && (!f->zero || f->dot))
+	if (!f->minus && !f->zero)
 		count += ft_pad(f->width - len, ' ');
 	if (!f->minus && f->zero && !f->dot)
 		count += ft_pad(f->width - len, '0');

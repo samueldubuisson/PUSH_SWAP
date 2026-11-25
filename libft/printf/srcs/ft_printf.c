@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdubuiss <sdubuiss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/03 07:28:11 by sdubuiss          #+#    #+#             */
-/*   Updated: 2026/11/14 16:22:09 by sdubuiss         ###   ########.fr       */
+/*   Created: 2026/11/02 16:00:00 by student           #+#    #+#             */
+/*   Updated: 2026/11/02 16:00:00 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
+#include "ft_printf.h"
 
 static int	ft_dispatch(char c, t_flags *f, va_list *ap)
 {

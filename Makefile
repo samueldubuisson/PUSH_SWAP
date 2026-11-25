@@ -1,7 +1,8 @@
 NAME = push_swap
+BONUS_NAME = checker
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I.
+CFLAGS = -Wall -Wextra -Werror -I. -Ibonus
 
 LIBFT = libft/libft.a
 
@@ -40,10 +41,19 @@ SRCS = src/main.c\
 	src/sorting/ft_find_best_candidate.c\
 	src/sorting/ft_rotate_both.c\
 	src/sorting/ft_calculate_rotation.c\
+	src/parsing/ft_parse_input.c\
+
+BONUS_SRCS = bonus/main.c\
+		bonus/ft_checker.c\
+		bonus/ft_check_sorted.c\
+		$(filter-out src/main.c,$(SRCS))
 
 OBJS = $(SRCS:.c=.o)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
+
+bonus: $(BONUS_NAME)
 
 $(LIBFT):
 	$(MAKE) -C libft
@@ -51,14 +61,16 @@ $(LIBFT):
 $(NAME): $(LIBFT) $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 
+$(BONUS_NAME): $(LIBFT) $(BONUS_OBJS)
+	$(CC) $(CFLAGS) $(BONUS_OBJS) $(LIBFT) -o $(BONUS_NAME)
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 	$(MAKE) -C libft clean
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(BONUS_NAME)
 	$(MAKE) -C libft fclean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re

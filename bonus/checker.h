@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils_two.c                                     :+:      :+:    :+:   */
+/*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdubuiss <sdubuiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/03 13:05:05 by sdubuiss          #+#    #+#             */
-/*   Updated: 2026/11/14 16:47:17 by sdubuiss         ###   ########.fr       */
+/*   Created: 2026/11/24 18:30:10 by sdubuiss          #+#    #+#             */
+/*   Updated: 2026/11/25 03:30:36 by sdubuiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef CHECKER_H
+# define CHECKER_H
 
-int	ft_putstr(char *s)
-{
-	int	i;
+# include "push_swap.h"
 
-	if (!s)
-		return (0);
-	i = 0;
-	while (s[i])
-		i += ft_putchar(s[i]);
-	return (i);
-}
+int	ft_checker(t_data *data);
+int	ft_check_sorted(t_stack *stack_a, t_stack *stack_b);
+
+#endif
