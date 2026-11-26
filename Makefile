@@ -34,14 +34,15 @@ SRCS = src/main.c\
 	src/parsing/ft_print_benchmark.c\
 	src/sorting/ft_compute_disorder.c\
 	src/sorting/ft_sort_stack.c\
-	src/sorting/ft_sort_simple.c\
-	src/sorting/ft_sort_medium.c\
-	src/sorting/ft_sort_complex.c\
+	src/sorting/sort_simple/ft_sort_simple.c\
+	src/sorting/sort_medium/ft_sort_medium.c\
+	src/sorting/sort_complex/ft_sort_complex.c\
 	src/utils/ft_utils_list_two.c\
-	src/sorting/ft_find_best_candidate.c\
-	src/sorting/ft_rotate_both.c\
-	src/sorting/ft_calculate_rotation.c\
+	src/sorting/sort_simple/ft_find_best_candidate.c\
+	src/sorting/sort_simple/ft_rotate_both.c\
+	src/sorting/sort_simple/ft_calculate_rotation.c\
 	src/parsing/ft_parse_input.c\
+	src/sorting/ft_sort_five.c\
 
 BONUS_SRCS = bonus/main.c\
 		bonus/ft_checker.c\

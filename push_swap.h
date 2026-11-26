@@ -6,7 +6,7 @@
 /*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/23 01:41:13 by username         #+#    #+#              */
-/*   Updated: 2026/11/25 19:44:33 by username        ###   ########.fr        */
+/*   Updated: 2026/11/26 00:11:39 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,5 +123,10 @@ int			ft_find_insert_position(t_stack *stack, int value);
 void		ft_rotate_both(t_data *data, int pos_a, int pos_b);
 t_rotation	ft_calculate_rotation(t_data *data, int pos_a, int pos_b);
 t_candidate	ft_find_best_candidate(t_data *data);
+int			ft_find_min(t_stack *stack);
+void		ft_sort_two(t_data *data);
+void		ft_sort_three(t_data *data);
+void		ft_sort_four(t_data *data);
+void		ft_sort_five(t_data *data);
 
 #endif
